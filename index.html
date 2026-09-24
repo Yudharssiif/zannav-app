@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZanNav — Public Transit & Daladala Navigation (Unguja, Zanzibar)</title>
+
+  <!-- Search Engine & AI Agent Metadata -->
+  <meta name="description"
+    content="Offline-first public transit and Daladala navigation mobile app for Unguja, Zanzibar. Discover Daladala lines, find bus stops, calculate multi-modal transfer routes, and navigate 100% offline without internet data. Developed by GeoNovex.">
+  <meta name="keywords"
+    content="ZanNav, Zanzibar Daladala, Unguja public transit, Zanzibar bus routes, Stone Town transit, Fuoni bus line, Kiembe Samaki, Daladala map, offline navigation Zanzibar, GeoNovex, Tanzania transit app, Zanzibar travel app, Daladala routes Unguja">
+  <meta name="author" content="GeoNovex (https://geonovex.netlify.app/)">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://yudharssiif.github.io/zannav-app/">
+
+  <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ZanNav">
+  <meta property="og:title" content="ZanNav — Public Transit & Daladala Navigation (Unguja, Zanzibar)">
+  <meta property="og:description"
+    content="Offline-first Daladala lines, verified bus stops, multi-modal transfer directions, and zero-data GPS navigation for Unguja, Zanzibar. Developed by GeoNovex.">
+  <meta property="og:url" content="https://yudharssiif.github.io/zannav-app/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://yudharssiif.github.io/zannav-app/favicon.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZanNav — Public Transit & Daladala Navigation (Unguja, Zanzibar)">
+  <meta name="twitter:description"
+    content="Offline-first Daladala routes, stops, and multi-modal transit navigation for Unguja, Zanzibar. Developed by GeoNovex.">
+  <meta name="twitter:image" content="https://yudharssiif.github.io/zannav-app/favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <!-- Schema.org JSON-LD Structured Data for Google Search & AI Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://yudharssiif.github.io/zannav-app/#application",
+        "name": "ZanNav",
+        "alternateName": "ZanNav Zanzibar Daladala Navigator",
+        "operatingSystem": "Android",
+        "applicationCategory": "TravelAndLocalApplication",
+        "applicationSubCategory": "Public Transit Navigation",
+        "description": "Offline-first public transit navigation application for Unguja, Zanzibar. Enables commuters and travelers to discover Daladala bus lines, locate bus stops, plan multi-modal routes with smart cross-street transfers, and navigate without internet dependency.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "TZS"
+        },
+        "downloadUrl": "https://yudharssiif.github.io/zannav-app/zannav-app-v1.5.2.1.apk",
+        "softwareVersion": "1.5.0",
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Unguja, Zanzibar, Tanzania"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "GeoNovex",
+          "url": "https://geonovex.netlify.app/"
+        },
+        "featureList": [
+          "100% Offline Navigation using local vector map tiles",
+          "Verified Daladala transit routes and bus stops across Unguja",
+          "Multi-modal smart transit transfer routing",
+          "Native OS geographic intent support for WhatsApp/SMS location pins",
+          "Bilingual Kiswahili and English user interface",
+          "Privacy-first with zero tracking and no user accounts"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://yudharssiif.github.io/zannav-app/#website",
+        "url": "https://yudharssiif.github.io/zannav-app/",
+        "name": "ZanNav — Public Transit & Daladala Navigation",
+        "description": "Official portal for ZanNav public transit navigation for Unguja, Zanzibar.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "GeoNovex",
+          "url": "https://geonovex.netlify.app/"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- ── Navigation ── -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z" />
+          </svg>
+        </div>
+        <span>ZanNav</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#download" class="nav-link">Download</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#transit" class="nav-link">Corridors</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="terms.html" class="nav-link">Terms</a></li>
+        <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="zannav-app-v1.5.2.1.apk" download="zannav-app-v1.5.2.1.apk" class="nav-cta">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span class="cta-text-full">Download APK</span>
+          <span class="cta-text-short">APK</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="badge reveal stagger-1">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+        </polygon>
+      </svg>
+      Offline-First Public Transit for Unguja, Zanzibar
+    </div>
+    <h1 class="reveal stagger-2">Navigating Unguja <span>Made Effortless</span></h1>
+    <p class="hero-subtitle reveal stagger-3">
+      ZanNav is an offline-first public transit navigator tailored specifically for Unguja, Zanzibar. Discover Daladala
+      lines, find nearby bus stops, calculate multi-modal walking & transfer routes, and open shared location links with
+      zero internet dependency.
+    </p>
+    <div class="hero-buttons reveal stagger-4">
+      <a href="zannav-app-v1.5.2.1.apk" download="zannav-app-v1.5.2.1.apk" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download APK (Android)
+      </a>
+      <a href="#how-it-works" class="btn-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        See How It Works
+      </a>
+    </div>
+
+    <!-- ── Interactive Corridor Preview ── -->
+    <div class="mockup-container reveal-scale stagger-5" id="transit">
+      <div class="mockup-grid">
+        <div class="mockup-card">
+          <div class="mockup-header">
+            <span class="route-pill">LINE 504</span>
+            <span style="font-size: 0.8rem; color: #86f8c9; font-weight: 700;">● Active Corridor</span>
+          </div>
+          <div class="route-corridor">Fuoni Corridor</div>
+          <div class="route-detail">Mnazi Mmoja Terminal ↔ Kisimani (Fuoni)</div>
+          <div style="margin-top: 1rem; font-size: 0.8rem; color: #6c7a72;">37 verified bus stops • ~42 mins travel time
+          </div>
+        </div>
+
+        <div class="mockup-card">
+          <div class="mockup-header">
+            <span class="route-pill" style="background: #fc6b32;">LINE 507</span>
+            <span style="font-size: 0.8rem; color: #fc6b32; font-weight: 700;">● Active Corridor</span>
+          </div>
+          <div class="route-corridor">Kiembe Samaki Corridor</div>
+          <div class="route-detail">Mnazi Mmoja Terminal ↔ Kiembe Samaki Mwisho</div>
+          <div style="margin-top: 1rem; font-size: 0.8rem; color: #6c7a72;">27 verified bus stops • ~36 mins travel time
+          </div>
+        </div>
+
+        <div class="mockup-card">
+          <div class="mockup-header">
+            <span class="route-pill" style="background: #1d9e75;">SMART TRANSFER</span>
+            <span style="font-size: 0.8rem; color: #1d9e75; font-weight: 700;">Multi-Modal</span>
+          </div>
+          <div class="route-corridor">Makada Bus Stop</div>
+          <div class="route-detail">Cross the road transfer between Line 504 & Line 507</div>
+          <div style="margin-top: 1rem; font-size: 0.8rem; color: #6c7a72;">Zero-guesswork cross-street transfer
+            instructions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Download Section ── -->
+  <section class="section" id="download">
+    <div class="download-box reveal-scale">
+      <div class="download-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Latest Release • v1.5.2
+      </div>
+      <h2 class="download-title">Get ZanNav for Android</h2>
+      <p class="download-desc">
+        Experience zero-data public transit navigation in Unguja. Download the APK directly to your phone and start
+        commuting smarter.
+      </p>
+
+      <div class="download-specs-grid">
+        <div class="download-spec-item">
+          <div class="download-spec-label">Version</div>
+          <div class="download-spec-val">1.5.2</div>
+        </div>
+        <div class="download-spec-item">
+          <div class="download-spec-label">Platform</div>
+          <div class="download-spec-val">Android 8.0+</div>
+        </div>
+        <div class="download-spec-item">
+          <div class="download-spec-label">Offline Map</div>
+          <div class="download-spec-val">~8.7 MB (Unguja)</div>
+        </div>
+        <div class="download-spec-item">
+          <div class="download-spec-label">License</div>
+          <div class="download-spec-val">Free & Open</div>
+        </div>
+      </div>
+
+      <div class="download-actions">
+        <a href="zannav-app-v1.5.2.1.apk" download="zannav-app-v1.5.2.1.apk" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download ZanNav APK
+        </a>
+      </div>
+
+      <div class="install-steps">
+        <div>
+          <div class="install-step-num">Step 1 • Download</div>
+          <div class="install-step-text">Download the <code>zannav-app-v1.5.2.1.apk</code> package file directly to your
+            phone.
+          </div>
+        </div>
+        <div>
+          <div class="install-step-num">Step 2 • Install</div>
+          <div class="install-step-text">Tap the downloaded file and enable installation from unknown sources if
+            prompted.</div>
+        </div>
+        <div>
+          <div class="install-step-num">Step 3 • Offline Map</div>
+          <div class="install-step-text">Launch ZanNav, allow location, and download the ~8.7 MB Unguja map for offline
+            routing.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How It Works ── -->
+  <section class="section" id="how-it-works">
+    <div class="section-header reveal">
+      <div class="section-tag">User Experience</div>
+      <h2 class="section-title">How ZanNav Works</h2>
+      <p class="section-desc">Get seamless transit directions across Unguja in three intuitive steps.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card reveal stagger-1">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Set Origin & Destination</h3>
+        <p class="step-desc">Use your current GPS location, tap any stop or point on the interactive island map, or open
+          a location link sent to you on WhatsApp.</p>
+      </div>
+
+      <div class="step-card reveal stagger-2">
+        <div class="step-num">02</div>
+        <h3 class="step-title">Get Multi-Modal Guidance</h3>
+        <p class="step-desc">ZanNav identifies your closest boarding stop, guides your walk, informs you which Daladala
+          number to board, and pinpoints where to alight or transfer.</p>
+      </div>
+
+      <div class="step-card reveal stagger-3">
+        <div class="step-num">03</div>
+        <h3 class="step-title">Travel 100% Offline</h3>
+        <p class="step-desc">No mobile data required. All routes, stops, road networks, and trip planning algorithms
+          function completely on your local device.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ── -->
+  <section class="section" id="features">
+    <div class="section-header reveal">
+      <div class="section-tag">Key Capabilities</div>
+      <h2 class="section-title">Engineered for Island Realities</h2>
+      <p class="section-desc">Designed from the ground up to solve the real everyday transit challenges of commuters in
+        Unguja.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card reveal stagger-1">
+        <div class="feature-icon green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <h3 class="feature-title">100% Offline Navigation</h3>
+        <p class="feature-desc">Download Unguja vector map tiles (~8.7 MB) once and navigate the entire island without
+          needing an active data bundle or cell reception.</p>
+      </div>
+
+      <div class="feature-card reveal stagger-2">
+        <div class="feature-icon orange">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 3 21 3 21 8"></polyline>
+            <line x1="4" y1="20" x2="21" y2="3"></line>
+            <polyline points="21 16 21 21 16 21"></polyline>
+            <line x1="15" y1="15" x2="21" y2="21"></line>
+            <line x1="4" y1="4" x2="9" y2="9"></line>
+          </svg>
+        </div>
+        <h3 class="feature-title">Multi-Modal Smart Transfers</h3>
+        <p class="feature-desc">Algorithmic routing links walking segments with Daladala lines, clearly instructing you
+          where to alight and cross the street to board connecting lines.</p>
+      </div>
+
+      <div class="feature-card reveal stagger-3">
+        <div class="feature-icon teal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <h3 class="feature-title">Native Location Intent Sharing</h3>
+        <p class="feature-desc">When someone sends you a location pin via WhatsApp or Maps, ZanNav registers as an
+          operating system navigation tool to plan your trip immediately.</p>
+      </div>
+
+      <div class="feature-card reveal stagger-4">
+        <div class="feature-icon green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>
+        <h3 class="feature-title">OpenStreetMap Data</h3>
+        <p class="feature-desc">Built on open spatial standards. Submit missing bus stops and report route updates to
+          continuously improve transit accuracy for all riders.</p>
+      </div>
+
+      <div class="feature-card reveal stagger-5">
+        <div class="feature-icon orange">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="m4.93 4.93 4.24 4.24"></path>
+            <path d="m14.83 9.17 4.24-4.24"></path>
+            <path d="m14.83 14.83 4.24 4.24"></path>
+            <path d="m9.17 14.83-4.24 4.24"></path>
+            <circle cx="12" cy="12" r="4"></circle>
+          </svg>
+        </div>
+        <h3 class="feature-title">Kiswahili & English</h3>
+        <p class="feature-desc">Fully localized into Kiswahili and English with an interactive segmented switcher for
+          effortless language switching in settings.</p>
+      </div>
+
+      <div class="feature-card reveal stagger-6">
+        <div class="feature-icon teal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3 class="feature-title">Privacy-By-Design</h3>
+        <p class="feature-desc">Zero accounts or tracking. Your live GPS coordinates never leave your device, and no
+          personal data is collected or monetized.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ Section ── -->
+  <section class="section" id="faq">
+    <div class="section-header reveal">
+      <div class="section-tag">Got Questions?</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-desc">Learn more about how ZanNav powers transit navigation in Unguja.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal stagger-1">
+        <button class="faq-question">
+          <span>Does ZanNav require an internet connection or mobile data?</span>
+          <div class="faq-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer">
+          No. ZanNav is built to be 100% offline-first. Once you download the compact Unguja vector map pack (~8.7 MB),
+          the entire search engine, bus stop directory, road network, and routing algorithm execute completely on your
+          phone without needing internet access or cell service.
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-2">
+        <button class="faq-question">
+          <span>Which regions are currently supported?</span>
+          <div class="faq-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer">
+          ZanNav currently covers Unguja, Zanzibar, including key transit hubs and corridors such as Mnazi Mmoja, Fuoni,
+          Mwanakwerekwe and Kiembe Samaki.
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-3">
+        <button class="faq-question">
+          <span>How does ZanNav calculate Daladala routes and transfers?</span>
+          <div class="faq-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer">
+          ZanNav uses an on-device multi-modal routing engine based on OpenStreetMap transit relations. When no direct
+          bus connects your origin and destination, the engine searches intersecting corridors to recommend the optimal
+          transfer stop (such as Makada), including instructions to walk and cross to the opposite stop.
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-4">
+        <button class="faq-question">
+          <span>How can I open locations sent from WhatsApp or Telegram?</span>
+          <div class="faq-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer">
+          ZanNav registers as an operating-system navigation provider for geographic links (`geo:` URIs and web map
+          links). When you tap a location pin in WhatsApp, Telegram, or SMS, simply choose ZanNav from the "Open
+          with..." dialog; the app will automatically launch, set the destination, and calculate your route.
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-5">
+        <button class="faq-question">
+          <span>How can I report a missing stop or suggest corrections?</span>
+          <div class="faq-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer">
+          Inside the ZanNav app, navigate to Settings and tap "Report Missing Bus Stop". You can pin the stop location
+          on the map, provide its local name, and submit it anonymously. Our team reviews submissions and contributes
+          verified transit nodes back to OpenStreetMap.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact Section ── -->
+  <section class="section" id="contact">
+    <div class="contact-container reveal-scale">
+      <div class="contact-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 16v-4"></path>
+          <path d="M12 8h.01"></path>
+        </svg>
+        Get in Touch
+      </div>
+      <h2 class="contact-title">Contact & Development</h2>
+      <p class="contact-desc">
+        Have questions about ZanNav, transit data collaborations, or mapping inquiries in Unguja? Reach out to the team
+        directly.
+      </p>
+
+      <div class="contact-cards-grid">
+        <div class="contact-card-item">
+          <div class="contact-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-title">Developer Website</div>
+            <a href="https://geonovex.netlify.app/" target="_blank" rel="noopener noreferrer" class="contact-item-link">
+              geonovex.netlify.app
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card-item">
+          <div class="contact-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-title">Direct Inquiries</div>
+            <a href="https://geonovex.netlify.app" target="_blank" rel="noopener noreferrer" class="contact-item-link">
+              Contact GeoNovex
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card-item">
+          <div class="contact-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-title">Location</div>
+            <div style="font-size: 0.88rem; color: #9aa8a0;">Zanzibar, Tanzania</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z" />
+            </svg>
+          </div>
+          <span>ZanNav</span>
+        </div>
+        <p class="footer-desc">
+          Zanzibar Daladala Navigation & Public Transit Guide for Unguja.
+        </p>
+        <div style="margin-top: 1rem;">
+          <span style="font-size: 0.85rem; color: #9aa8a0;">Developed by </span>
+          <a href="https://geonovex.netlify.app/" target="_blank" rel="noopener noreferrer" class="dev-badge">
+            GeoNovex
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#download">Download APK</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#transit">Corridors</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Legal & Policies</h4>
+          <ul>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Development & Open Data</h4>
+          <ul>
+            <li><a href="https://geonovex.netlify.app/" target="_blank" rel="noopener noreferrer">GeoNovex Studio</a>
+            </li>
+            <li><a href="zannav-app-v1.5.2.1.apk" download="zannav-app-v1.5.2.1.apk">Android APK Download</a></li>
+            <li><a href="https://geonovex.netlify.app" target="_blank" rel="noopener noreferrer">Inquiries &
+                Support</a></li>
+            <li><a href="https://www.openstreetmap.org/copyright" target="_blank"
+                rel="noopener noreferrer">OpenStreetMap ODbL</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© <span class="current-year">2026</span> ZanNav. Developed by <a href="https://geonovex.netlify.app/"
+          target="_blank" rel="noopener noreferrer" style="color: #86f8c9;">GeoNovex</a>. All rights reserved.</div>
+      <div>Unguja, Zanzibar • Map Data © OpenStreetMap contributors</div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script>
+    // Automatically update current year
+    document.querySelectorAll('.current-year').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+
+    // Mobile navigation drawer toggle
+    const navToggle = document.getElementById('navToggle');
+    const headerNavbar = document.querySelector('.navbar');
+
+    if (navToggle && headerNavbar) {
+      navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = headerNavbar.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // Close mobile menu when clicking any nav link
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          headerNavbar.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!headerNavbar.contains(e.target)) {
+          headerNavbar.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // Scroll progress bar & dynamic navbar styling
+    const scrollProgress = document.getElementById('scroll-progress');
+    const navbar = document.querySelector('.navbar');
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+      if (scrollProgress) {
+        scrollProgress.style.width = scrollPercent + '%';
+      }
+
+      if (navbar) {
+        if (scrollTop > 25) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }
+
+      if (backToTop) {
+        if (scrollTop > 300) {
+          backToTop.classList.add('active');
+        } else {
+          backToTop.classList.remove('active');
+        }
+      }
+    }, { passive: true });
+
+    if (backToTop) {
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Scroll Reveal IntersectionObserver
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // FAQ Accordion Interaction
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
