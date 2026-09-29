@@ -1,114 +1,166 @@
-# ZanNav — Public Transit & Daladala Navigation
+<p align="center">
+  <a href="https://yudharssiif.github.io/zannav-app/">
+    <img src="logo.png" alt="ZanNav Mapper Logo" width="140" height="140" style="border-radius: 20px;">
+  </a>
+</p>
 
-Official website portal and distribution repository for **ZanNav**, an offline-first public transit and Daladala navigation application built exclusively for **Unguja, Zanzibar**.
+<h1 align="center">ZanNav Mapper</h1>
 
-* **Live Website**: [https://yudharssiif.github.io/zannav-app/](https://yudharssiif.github.io/zannav-app/)
-* **Developer**: [GeoNovex](https://geonovex.netlify.app/)
-* **Platform**: Android (APK) & Web Portal
-* **Coverage Scope**: Unguja Island, Zanzibar, Tanzania
+<p align="center">
+  <strong>Community Daladala Route Mapping &amp; Public Transit Field Data Collection for Unguja, Zanzibar</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.3.apk"><img src="https://img.shields.io/badge/Download%20APK-v1.0.3--preview-8b5cf6?style=for-the-badge&logo=android&logoColor=white" alt="Download ZanNav Mapper APK"></a>
+  <a href="https://yudharssiif.github.io/zannav-app/"><img src="https://img.shields.io/badge/Live%20Portal-GitHub%20Pages-10b981?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Portal"></a>
+  <img src="https://img.shields.io/badge/Coverage-Unguja%2C%20Zanzibar-0ea5e9?style=for-the-badge" alt="Coverage: Unguja, Zanzibar">
+  <a href="https://geonovex.netlify.app/"><img src="https://img.shields.io/badge/Developer-GeoNovex-6366f1?style=for-the-badge" alt="GeoNovex"></a>
+</p>
 
 ---
 
 ## Overview
 
-ZanNav solves the everyday transit challenges of commuters, students, and visitors across Unguja. Public transport on the island is powered by Daladalas (local minibuses) and connecting transit corridors that traditionally lacked digital mapping, route numbers, or verified stop coordinates.
+**ZanNav Mapper** is an open, community-driven spatial data collection tool created exclusively for **Unguja, Zanzibar**. 
 
-ZanNav provides an offline-first mobile navigation experience with on-device graph routing, stop directories, and multi-modal transit calculation that operates with zero mobile data consumption.
+Every day, hundreds of thousands of islanders rely on **Daladalas** (local minibuses) to commute between urban hubs and residential corridors. However, Zanzibar's public transit network has historically lacked formal open digital maps, standardized route codes, or verified bus stage (*vituo*) coordinates.
 
----
+ZanNav Mapper puts data collection directly in the hands of commuters, students, researchers, and transport advocates. Using on-device GPS logging and offline point-of-interest tagging, contributors trace actual Daladala paths and verify boarding stages to build Zanzibar's first open public transit database.
 
-## Key Features
-
-### 1. 100% Offline Navigation
-* Download the compact Unguja vector map pack (~8.7 MB) once.
-* All route calculation, stop searches, road networks, and trip planning algorithms execute entirely on the user's phone without requiring internet access or active cellular data.
-
-### 2. Verified Daladala Routes & Terminals
-* Comprehensive coverage across major Unguja transit corridors, including:
-  * **Line 504**: Mnazi Mmoja Terminal ↔ Kisimani (Fuoni)
-  * **Line 507**: Mnazi Mmoja Terminal ↔ Kiembe Samaki Mwisho
-  * Major transit hubs including Mnazi Mmoja, Darajani, and Mwanakwerekwe.
-* Terminals and terminus stops are automatically recognized and prioritized.
-
-### 3. Multi-Modal Smart Transfers
-* When no direct bus connects the origin and destination, ZanNav calculates multi-modal paths combining:
-  * Walking legs to the closest verified boarding stop.
-  * Daladala transit segments.
-  * Clear cross-street transfer instructions (e.g., at Makada Bus Stop) to switch between intersecting lines.
-
-### 4. Native Location Intent Sharing
-* Registers with the Android operating system to handle standard geographic intents (`geo:` URIs and web map links).
-* When a location pin is shared via WhatsApp, Telegram, or SMS, users can tap "Open with ZanNav" to initiate immediate transit routing.
-
-### 5. Bilingual Experience
-* Native bilingual support in both **Kiswahili** and **English** with instant switching.
-
-### 6. Privacy-by-Design
-* Zero user accounts, registration, or logins required.
-* Live GPS coordinates never leave the device and are never sent to remote servers.
-* No advertising SDKs, background tracking, or commercial telemetry.
+* **Live Community Portal**: [https://yudharssiif.github.io/zannav-app/](https://yudharssiif.github.io/zannav-app/)
+* **Direct APK Download**: [ZanNav Mapper APK (Latest Release)](https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.3.apk)
+* **Lead Developer**: [GeoNovex](https://geonovex.netlify.app/)
+* **Target Region**: Unguja Island, Zanzibar, Tanzania
 
 ---
 
-## Android APK Installation
+## Priority Corridors Needing Mapping
 
-To install ZanNav directly on an Android device:
+The mapping effort is prioritized across high-demand commuter arteries connecting Zanzibar's central business district with growing residential and commercial zones:
 
-1. **Download APK**: Download `zannav-app.apk` directly from this repository or via the [official website](https://yudharssiif.github.io/zannav-app/).
-2. **Enable Unknown Sources**: If prompted by Android, permit installation from your browser or file manager (**Settings > Security > Install unknown apps**).
-3. **Install & Launch**: Tap the APK file and select **Install**.
-4. **Download Offline Map**: On first launch, allow location access and tap the prompt in Settings to download the ~8.7 MB Unguja offline vector map pack.
+| Corridor | Key Stops / Landmarks | Status | Progress | Priority |
+| :--- | :--- | :---: | :---: | :---: |
+| **Fuoni ↔ Mnazi Mmoja** | Mnazi Mmoja • Mwanakwerekwe • Kisimani Fuoni | In Progress | **80%** | Moderate |
+| **Kiembe Samaki ↔ Mnazi Mmoja** | Mnazi Mmoja • Kwerekwe • Kiembe Samaki Mwisho | In Progress | **60%** | Moderate |
+| **Bububu ↔ Mnazi Mmoja** | Mnazi Mmoja • Darajani • Mtoni • Bububu Kituoni | Not Started | **0%** | **High** |
+| **Bububu ↔ Fuoni** | Bububu • Masingini • Mwanakwerekwe • Fuoni | Not Started | **0%** | **High** |
+| **Uwanja wa Ndege ↔ Mnazi Mmoja** | Mnazi Mmoja • Kilimani • Airport Terminal (AAKT) | Not Started | **0%** | **High** |
+| **Chukwani ↔ Mnazi Mmoja** | Mnazi Mmoja • Mbweni • Chukwani Mwisho | Not Started | **0%** | Normal |
+| **Daraja Bovu ↔ Mnazi Mmoja** | Mnazi Mmoja • Kariakoo • Daraja Bovu | Not Started | **0%** | Normal |
+| **Secondary Feeder Routes** | Rural arteries, peripheral hubs, & cross-town spurs | Needs Help | **0%** | Open |
+
+> *Want to claim one of these corridors? Download the APK and start recording during your daily commute.*
+
+---
+
+## Core Features
+
+### 1. High-Precision GPS Trace Recording
+* Record clean breadcrumb trails while riding any Daladala.
+* Configurable waypoint intervals to balance positional accuracy with battery efficiency.
+* Native export to standard **GPX** and **GeoJSON** spatial formats.
+
+### 2. Rapid Bus Stage (*Kituo*) Pinning
+* Drop a bus stop marker in two taps without interrupting GPS logging.
+* Log local Swahili names (e.g. *Kituo cha Makada*, *Darajani Terminal*, *Kiembe Samaki Mwisho*).
+* Designate shelter availability, boarding direction, and cross-street transfer points.
+
+### 3. 100% Offline Field Capability
+* Collect data in remote or low-connectivity corridors with zero cellular data requirements.
+* Stores traces and bus stages safely in local SQLite storage until you are ready to export or upload.
+
+### 4. Open-Data First Ethos
+* All collected geometry feeds into the open Zanzibar transit repository.
+* Data is prepared for upstream integration into **OpenStreetMap (OSM)** and General Transit Feed Specification (**GTFS**).
+
+### 5. Privacy & Contributor Autonomy
+* No forced account creation, passwords, or personal profile tracking.
+* Only spatial transit tracks you intentionally choose to save and submit are recorded.
+
+---
+
+## Download & Installation
+
+The ZanNav Mapper companion app is distributed as an Android APK via GitHub Releases.
+
+1. **Download APK**: Download [`zannav-mapper-v1.0.3.apk`](https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.3.apk) directly to your Android device.
+2. **Enable Unknown Apps**: When prompted by your browser or file manager, allow permission (**Settings > Apps > Special app access > Install unknown apps**).
+3. **Install & Open**: Tap the downloaded file and select **Install**.
+4. **Grant Location**: Allow Fine Location permission so your phone's GPS can track route geometry.
 
 ### System Requirements
 * **Operating System**: Android 8.0 (API Level 26) or higher.
-* **Storage Space**: ~45 MB for application + ~8.7 MB for the offline map pack.
-* **Permissions**: Fine & Coarse Location (optional for manual route entry; required for live GPS centering and boarding detection).
+* **Hardware**: Device with GPS / GNSS receiver.
+* **Storage**: Under 25 MB install size.
+
+---
+
+## How to Map a Route (Contributor Guide)
+
+```text
+1. BOARD DALADALA  ──>  2. TAP "START ROUTE"  ──>  3. PIN EACH STOP (KITUO)  ──>  4. FINISH & EXPORT
+```
+
+1. **Plan Your Trip**: Select an unmapped corridor from the list above.
+2. **Start Recording**: Board the Daladala at its origin terminal and tap **Start GPS Recording** in ZanNav Mapper.
+3. **Pin Bus Stops**: Whenever the Daladala stops to pick up or drop off passengers, tap **Pin Stop** and enter the local name.
+4. **Finish at Terminus**: When you reach the final destination stage, tap **Stop & Save**.
+5. **Share Your Track**: Export the GPX/GeoJSON or submit directly through the portal to have your contribution reviewed and added to the official network map.
 
 ---
 
 ## Repository Structure
 
+All website files, manifests, icons, and documentation reside in the root repository folder:
+
 ```text
-zannav-app/
-├── index.html            # Main landing page & interactive corridor preview
-├── style.css             # Vanilla CSS design system & responsive layout
-├── terms.html            # Public Terms of Service
-├── privacy.html          # Public Privacy Policy
-├── favicon.svg           # Vector app branding icon (Material bus mark)
-├── zannav-app.apk        # Android application package (release build)
-├── TERMS.md              # Markdown source for Terms of Service
-└── README.md             # Project documentation
+.
+├── index.html                   # Community portal & corridor mapping web application
+├── style.css                    # Modern CSS design system & layout styling
+├── logo.png                     # Official ZanNav Mapper brand logo (1000x1000)
+├── favicon-96x96.png            # 96x96 PNG browser favicon
+├── favicon.ico                  # Standard ICO browser favicon
+├── favicon.svg                  # High-resolution vector SVG favicon
+├── apple-touch-icon.png         # iOS 180x180 Apple Touch home-screen icon
+├── site.webmanifest             # PWA web manifest configuration
+├── web-app-manifest-192x192.png # PWA 192px application icon
+├── web-app-manifest-512x512.png # PWA 512px application icon
+├── terms.html                   # Contributor & user Terms of Service
+├── privacy.html                 # Contributor & user Privacy Policy
+├── PRIVACY_POLICY.md            # Markdown source for Privacy Policy
+└── README.md                    # Project documentation & contributor guide
 ```
 
 ---
 
 ## GitHub Pages Deployment
 
-This repository is pre-configured for instant deployment on GitHub Pages:
+The ZanNav Mapper web portal is hosted directly via GitHub Pages:
 
-1. Fork or push this repository to your GitHub account (`https://github.com/Yudharssiif/zannav-app`).
-2. Navigate to **Settings > Pages** in your repository.
+1. Push or fork this repository to your GitHub account (`https://github.com/Yudharssiif/zannav-app`).
+2. Go to **Settings > Pages**.
 3. Under **Build and deployment**:
    * **Source**: `Deploy from a branch`
    * **Branch**: `main`, Folder: `/ (root)`
-4. Click **Save**. Your site will be published at `https://<username>.github.io/zannav-app/`.
+4. Click **Save**. The website will be live at `https://<username>.github.io/zannav-app/`.
 
 ---
 
-## Open Data & Attribution
+## Open Transit Data & Attribution
 
-* **Transit & Map Data**: OpenStreetMap contributors. Map data is available under the [Open Database License (ODbL)](https://www.openstreetmap.org/copyright).
-* **Community Contributions**: Missing bus stop submissions and corridor verifications are validated and contributed back to OpenStreetMap to support the broader Zanzibar mapping ecosystem.
+* **Transit Geometry**: Contributed by the Zanzibar transit community under the [Open Database License (ODbL)](https://www.openstreetmap.org/copyright).
+* **Basemaps & Cartography**: © [OpenStreetMap](https://www.openstreetmap.org/) contributors.
+* **Community Validation**: All collected corridor lines and bus stops are cross-referenced with local transit operators to guarantee passenger safety and data reliability.
 
 ---
 
 ## Developer & Contact
 
-ZanNav is designed, developed, and maintained by **GeoNovex**.
+ZanNav Mapper is conceptualized, engineered, and maintained by **GeoNovex**.
 
 * **Website**: [https://geonovex.netlify.app/](https://geonovex.netlify.app/)
-* **Inquiries**: [https://geonovex.netlify.app/](https://geonovex.netlify.app/)
-* **Location**: Zanzibar, Tanzania
+* **Inquiries & Partnerships**: [https://geonovex.netlify.app/](https://geonovex.netlify.app/)
+* **Headquarters**: Zanzibar, Tanzania
 
 ---
 
@@ -117,4 +169,4 @@ ZanNav is designed, developed, and maintained by **GeoNovex**.
 * [Terms of Service](terms.html)
 * [Privacy Policy](privacy.html)
 
-Copyright 2026 ZanNav. Developed by GeoNovex. All rights reserved.
+&copy; 2026 ZanNav Mapper. Developed by GeoNovex. All rights reserved.
