@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.3.apk"><img src="https://img.shields.io/badge/Download%20APK-v1.0.3--preview-8b5cf6?style=for-the-badge&logo=android&logoColor=white" alt="Download ZanNav Mapper APK"></a>
-  <a href="https://yudharssiif.github.io/zannav-app/"><img src="https://img.shields.io/badge/Live%20Portal-GitHub%20Pages-10b981?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Portal"></a>
-  <img src="https://img.shields.io/badge/Coverage-Unguja%2C%20Zanzibar-0ea5e9?style=for-the-badge" alt="Coverage: Unguja, Zanzibar">
+  <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.4.apk"><img src="https://img.shields.io/badge/Download%20APK-v1.0.4-8b5cf6?style=for-the-badge&logo=android&logoColor=white" alt="Download ZanNav Mapper APK"></a>
+  <a href="https://yudharssiif.github.io/zannav-mapper-app/"><img src="https://img.shields.io/badge/iOS%20Web%20App-Safari%20PWA-10b981?style=for-the-badge&logo=safari&logoColor=white" alt="iOS Web App"></a>
+  <a href="https://yudharssiif.github.io/zannav-app/"><img src="https://img.shields.io/badge/Live%20Portal-GitHub%20Pages-0ea5e9?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Portal"></a>
   <a href="https://geonovex.netlify.app/"><img src="https://img.shields.io/badge/Developer-GeoNovex-6366f1?style=for-the-badge" alt="GeoNovex"></a>
 </p>
 
@@ -28,7 +28,8 @@ Every day, hundreds of thousands of islanders rely on **Daladalas** (local minib
 ZanNav Mapper puts data collection directly in the hands of commuters, students, researchers, and transport advocates. Using on-device GPS logging and offline point-of-interest tagging, contributors trace actual Daladala paths and verify boarding stages to build Zanzibar's first open public transit database.
 
 * **Live Community Portal**: [https://yudharssiif.github.io/zannav-app/](https://yudharssiif.github.io/zannav-app/)
-* **Direct APK Download**: [ZanNav Mapper APK (Latest Release)](https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.3.apk)
+* **Direct Android APK Download**: [ZanNav Mapper APK v1.0.4](https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.4.apk)
+* **iOS Web App (Safari PWA)**: [https://yudharssiif.github.io/zannav-mapper-app/](https://yudharssiif.github.io/zannav-mapper-app/)
 * **Lead Developer**: [GeoNovex](https://geonovex.netlify.app/)
 * **Target Region**: Unguja Island, Zanzibar, Tanzania
 
@@ -79,19 +80,25 @@ The mapping effort is prioritized across high-demand commuter arteries connectin
 
 ---
 
-## Download & Installation
+## Download & Platform Access
 
-The ZanNav Mapper companion app is distributed as an Android APK via GitHub Releases.
+ZanNav Mapper is available across platforms:
 
-1. **Download APK**: Download [`zannav-mapper-v1.0.3.apk`](https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.3.apk) directly to your Android device.
+### 1. Android Native App (v1.0.4 APK)
+Distributed directly via GitHub Releases:
+1. **Download APK**: Download [`zannav-mapper-v1.0.4.apk`](https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.4.apk) directly to your Android device.
 2. **Enable Unknown Apps**: When prompted by your browser or file manager, allow permission (**Settings > Apps > Special app access > Install unknown apps**).
 3. **Install & Open**: Tap the downloaded file and select **Install**.
 4. **Grant Location**: Allow Fine Location permission so your phone's GPS can track route geometry.
 
-### System Requirements
-* **Operating System**: Android 8.0 (API Level 26) or higher.
-* **Hardware**: Device with GPS / GNSS receiver.
-* **Storage**: Under 25 MB install size.
+* **Requirements**: Android 8.0 (API Level 26) or higher • GPS receiver • ~25 MB storage.
+
+### 2. Apple iOS Web App (Safari PWA)
+Exported for iPhone & iPad users without requiring App Store or TestFlight:
+1. **Open Safari**: Visit [https://yudharssiif.github.io/zannav-mapper-app/](https://yudharssiif.github.io/zannav-mapper-app/).
+2. **Share**: Tap the **Share** button (box with upward arrow) in the bottom navigation bar.
+3. **Add to Home Screen**: Scroll down and select **"Add to Home Screen"**, then tap **"Add"**.
+4. **Launch**: Open from your Home Screen for a standalone, full-screen offline-ready mapping experience with live GPS location tracking.
 
 ---
 
