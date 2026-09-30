@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.5.apk"><img src="https://img.shields.io/badge/Download%20APK-v1.0.5-8b5cf6?style=for-the-badge&logo=android&logoColor=white" alt="Download ZanNav Mapper APK"></a>
+  <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.6.apk"><img src="https://img.shields.io/badge/Download%20APK-v1.0.6-8b5cf6?style=for-the-badge&logo=android&logoColor=white" alt="Download ZanNav Mapper APK"></a>
   <a href="https://yudharssiif.github.io/zannav-mapper-app/"><img src="https://img.shields.io/badge/iOS%20Web%20App-Safari%20PWA-10b981?style=for-the-badge&logo=safari&logoColor=white" alt="iOS Web App"></a>
   <a href="https://yudharssiif.github.io/zannav-app/"><img src="https://img.shields.io/badge/Live%20Portal-GitHub%20Pages-0ea5e9?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Portal"></a>
   <a href="https://geonovex.netlify.app/"><img src="https://img.shields.io/badge/Developer-GeoNovex-6366f1?style=for-the-badge" alt="GeoNovex"></a>
@@ -28,7 +28,7 @@ Every day, hundreds of thousands of islanders rely on **Daladalas** (local minib
 ZanNav Mapper puts data collection directly in the hands of commuters, students, researchers, and transport advocates. Using on-device GPS logging and offline point-of-interest tagging, contributors trace actual Daladala paths and verify boarding stages to build Zanzibar's first open public transit database.
 
 * **Live Community Portal**: [https://yudharssiif.github.io/zannav-app/](https://yudharssiif.github.io/zannav-app/)
-* **Direct Android APK Download**: [ZanNav Mapper APK v1.0.5](https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.5.apk)
+* **Direct Android APK Download**: [ZanNav Mapper APK v1.0.6](https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.6.apk)
 * **iOS Web App (Safari PWA)**: [https://yudharssiif.github.io/zannav-mapper-app/](https://yudharssiif.github.io/zannav-mapper-app/)
 * **Lead Developer**: [GeoNovex](https://geonovex.netlify.app/)
 * **Target Region**: Unguja Island, Zanzibar, Tanzania
@@ -84,9 +84,9 @@ The mapping effort is prioritized across high-demand commuter arteries connectin
 
 ZanNav Mapper is available across platforms:
 
-### 1. Android Native App (v1.0.5 APK)
+### 1. Android Native App (v1.0.6 APK)
 Distributed directly via GitHub Releases:
-1. **Download APK**: Download [`zannav-mapper-v1.0.5.apk`](https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.5.apk) directly to your Android device.
+1. **Download APK**: Download [`zannav-mapper-v1.0.6.apk`](https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.6.apk) directly to your Android device.
 2. **Enable Unknown Apps**: When prompted by your browser or file manager, allow permission (**Settings > Apps > Special app access > Install unknown apps**).
 3. **Install & Open**: Tap the downloaded file and select **Install**.
 4. **Grant Location**: Allow Fine Location permission so your phone's GPS can track route geometry.

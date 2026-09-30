@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZanNav Mapper — Daladala Route Mapping & Community Transit Data (Zanzibar)</title>
+  <title>ZanNav Mapper</title>
 
   <!-- Search Engine & AI Agent Metadata -->
   <meta name="description"
-    content="Join the community mission to map every Daladala route, bus stop, and transfer hub across Unguja, Zanzibar. Download ZanNav Mapper APK (v1.0.5) for Android or launch the iOS Web App to record GPS tracks, pin verified bus stages (vituo), and build Zanzibar's first open transit database. Developed by GeoNovex.">
+    content="Join the community mission to map every Daladala route, bus stop, and transfer hub across Unguja, Zanzibar. Download ZanNav Mapper APK (v1.0.6) for Android or launch the iOS Web App to record GPS tracks, pin verified bus stages (vituo), and build Zanzibar's first open transit database. Developed by GeoNovex.">
   <meta name="keywords"
     content="ZanNav Mapper, Daladala mapping Zanzibar, Zanzibar transit data, contribute Daladala routes, map bus stops Unguja, OpenStreetMap Zanzibar, transit field data collection, GeoNovex, Stone Town daladala, Fuoni daladala, Kiembe Samaki transit map, public transport mapping Tanzania, iOS transit mapping">
   <meta name="author" content="GeoNovex (https://geonovex.netlify.app/)">
@@ -20,7 +20,7 @@
   <meta property="og:site_name" content="ZanNav Mapper">
   <meta property="og:title" content="ZanNav Mapper — Help Map Zanzibar's Daladala Transit Network">
   <meta property="og:description"
-    content="Field transit data collection for Unguja, Zanzibar. Trace Daladala routes with GPS, drop bus stop pins (vituo), and build open transit data for Zanzibar. Download Android APK v1.0.5 or launch the iOS Web App.">
+    content="Field transit data collection for Unguja, Zanzibar. Trace Daladala routes with GPS, drop bus stop pins (vituo), and build open transit data for Zanzibar. Download Android APK v1.0.6 or launch the iOS Web App.">
   <meta property="og:url" content="https://yudharssiif.github.io/zannav-app/">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="logo.png">
@@ -29,7 +29,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ZanNav Mapper — Map Daladala Routes in Zanzibar">
   <meta name="twitter:description"
-    content="Join the open transit data movement in Zanzibar. Download ZanNav Mapper APK v1.0.5 for Android or access the iOS Web App across Unguja.">
+    content="Join the open transit data movement in Zanzibar. Download ZanNav Mapper APK v1.0.6 for Android or access the iOS Web App across Unguja.">
   <meta name="twitter:image" content="logo.png">
 
   <!-- Favicon & PWA -->
@@ -60,9 +60,9 @@
           "price": "0",
           "priceCurrency": "TZS"
         },
-        "downloadUrl": "https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.5.apk",
+        "downloadUrl": "https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.6.apk",
         "installUrl": "https://yudharssiif.github.io/zannav-mapper-app/",
-        "softwareVersion": "1.0.5",
+        "softwareVersion": "1.0.6",
         "areaServed": {
           "@type": "AdministrativeArea",
           "name": "Unguja, Zanzibar, Tanzania"
@@ -73,7 +73,7 @@
           "url": "https://geonovex.netlify.app/"
         },
         "featureList": [
-          "Native Android APK v1.0.5 & iOS Safari Progressive Web App (PWA)",
+          "Native Android APK v1.0.6 & iOS Safari Progressive Web App (PWA)",
           "Real-time GPS Daladala route path tracing",
           "One-tap bus stop (kituo) and transfer stage pinning",
           "100% Offline field survey caching without cellular data",
@@ -103,21 +103,26 @@
     :root {
       --max-w: 1360px;
     }
+
     .hero {
       max-width: 1360px;
       padding: 4.5rem 2rem 3.5rem;
     }
+
     .hero-subtitle {
       max-width: 860px;
     }
+
     .mockup-container {
       max-width: 1280px;
       width: 100%;
     }
+
     .section {
       max-width: 1360px;
       padding: 4.5rem 2rem;
     }
+
     .section-header {
       max-width: 820px;
     }
@@ -131,6 +136,7 @@
       font-weight: 800;
       letter-spacing: -0.4px;
     }
+
     .brand-tag {
       font-size: 0.68rem;
       font-weight: 800;
@@ -142,6 +148,7 @@
       border-radius: 999px;
       text-transform: uppercase;
     }
+
     .brand-logo-img {
       width: 36px;
       height: 36px;
@@ -150,14 +157,17 @@
       flex-shrink: 0;
       display: block;
     }
+
     .badge.mapper-badge {
       background: rgba(167, 139, 250, 0.14);
       border-color: rgba(167, 139, 250, 0.35);
       color: #c4b5fd;
     }
+
     .badge.mapper-badge svg {
       color: #a78bfa;
     }
+
     .pulse-dot {
       width: 8px;
       height: 8px;
@@ -168,16 +178,30 @@
       box-shadow: 0 0 10px #a78bfa;
       animation: pulseGlow 1.8s infinite;
     }
+
     @keyframes pulseGlow {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.7); }
-      70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(167, 139, 250, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(167, 139, 250, 0); }
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.7);
+      }
+
+      70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 8px rgba(167, 139, 250, 0);
+      }
+
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(167, 139, 250, 0);
+      }
     }
+
     .btn-primary.purple {
       background: linear-gradient(135deg, #a78bfa, #7c3aed);
       color: #ffffff;
       box-shadow: 0 6px 24px rgba(124, 58, 237, 0.35);
     }
+
     .btn-primary.purple:hover {
       box-shadow: 0 8px 30px rgba(124, 58, 237, 0.55);
       transform: translateY(-2px);
@@ -195,6 +219,7 @@
       gap: 1.5rem;
       margin-top: 2rem;
     }
+
     .impact-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -204,18 +229,23 @@
       position: relative;
       overflow: hidden;
     }
+
     .impact-card:hover {
       transform: translateY(-4px);
       border-color: rgba(167, 139, 250, 0.45);
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
     }
+
     .impact-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 3px;
       background: linear-gradient(90deg, #a78bfa, #1d9e75);
     }
+
     .impact-icon {
       width: 48px;
       height: 48px;
@@ -227,6 +257,7 @@
       justify-content: center;
       margin-bottom: 1.25rem;
     }
+
     .impact-title {
       font-family: var(--font-heading);
       font-size: 1.2rem;
@@ -234,6 +265,7 @@
       margin-bottom: 0.5rem;
       color: #f3f6f4;
     }
+
     .impact-desc {
       font-size: 0.92rem;
       color: var(--text-muted);
@@ -247,6 +279,7 @@
       gap: 1.75rem;
       margin-top: 2.5rem;
     }
+
     .corridor-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -257,11 +290,13 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
     .corridor-card:hover {
       transform: translateY(-3px);
       border-color: rgba(167, 139, 250, 0.4);
       box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
     }
+
     .corridor-header {
       display: flex;
       align-items: center;
@@ -270,6 +305,7 @@
       gap: 0.5rem;
       flex-wrap: wrap;
     }
+
     .corridor-badge {
       display: inline-flex;
       align-items: center;
@@ -281,26 +317,31 @@
       padding: 0.28rem 0.7rem;
       border-radius: 999px;
     }
+
     .corridor-badge.started-green {
       background: rgba(134, 248, 201, 0.12);
       color: #86f8c9;
       border: 1px solid rgba(134, 248, 201, 0.3);
     }
+
     .corridor-badge.started-purple {
       background: rgba(167, 139, 250, 0.15);
       color: #c4b5fd;
       border: 1px solid rgba(167, 139, 250, 0.35);
     }
+
     .corridor-badge.needed {
       background: rgba(252, 107, 50, 0.14);
       color: #fc6b32;
       border: 1px solid rgba(252, 107, 50, 0.35);
     }
+
     .corridor-badge.open {
       background: rgba(29, 158, 117, 0.15);
       color: #86f8c9;
       border: 1px solid rgba(29, 158, 117, 0.3);
     }
+
     .corridor-name {
       font-family: var(--font-heading);
       font-size: 1.3rem;
@@ -308,12 +349,14 @@
       margin-bottom: 0.35rem;
       color: #e8f0ec;
     }
+
     .corridor-route {
       font-size: 0.88rem;
       color: #86f8c9;
       font-weight: 600;
       margin-bottom: 0.85rem;
     }
+
     .corridor-detail {
       font-size: 0.88rem;
       color: var(--text-muted);
@@ -325,6 +368,7 @@
     .corridor-progress-wrap {
       margin: 1rem 0 1.25rem;
     }
+
     .corridor-progress-meta {
       display: flex;
       justify-content: space-between;
@@ -333,10 +377,23 @@
       font-weight: 700;
       margin-bottom: 0.4rem;
     }
-    .corridor-progress-meta.green { color: #86f8c9; }
-    .corridor-progress-meta.purple { color: #c4b5fd; }
-    .corridor-progress-meta.orange { color: #fc6b32; }
-    .corridor-progress-meta.gray { color: #9aa8a0; }
+
+    .corridor-progress-meta.green {
+      color: #86f8c9;
+    }
+
+    .corridor-progress-meta.purple {
+      color: #c4b5fd;
+    }
+
+    .corridor-progress-meta.orange {
+      color: #fc6b32;
+    }
+
+    .corridor-progress-meta.gray {
+      color: #9aa8a0;
+    }
+
     .progress-bar-track {
       width: 100%;
       height: 8px;
@@ -345,19 +402,23 @@
       overflow: hidden;
       position: relative;
     }
+
     .progress-bar-fill {
       height: 100%;
       border-radius: 999px;
       transition: width 0.8s ease-in-out;
     }
+
     .progress-bar-fill.green {
       background: linear-gradient(90deg, #1d9e75, #86f8c9);
       box-shadow: 0 0 10px rgba(134, 248, 201, 0.5);
     }
+
     .progress-bar-fill.purple {
       background: linear-gradient(90deg, #7c3aed, #a78bfa);
       box-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
     }
+
     .progress-bar-fill.empty {
       background: rgba(255, 255, 255, 0.12);
       width: 0% !important;
@@ -386,6 +447,7 @@
       gap: 2rem;
       flex-wrap: wrap;
     }
+
     .contributor-banner-text h3 {
       font-family: var(--font-heading);
       font-size: 1.45rem;
@@ -393,6 +455,7 @@
       margin-bottom: 0.4rem;
       color: #f3f6f4;
     }
+
     .contributor-banner-text p {
       color: var(--text-muted);
       font-size: 0.95rem;
@@ -405,10 +468,12 @@
       max-width: 1080px;
       width: 100%;
     }
+
     .faq-list {
       max-width: 1080px;
       width: 100%;
     }
+
     .contact-container {
       max-width: 1080px;
       width: 100%;
@@ -428,8 +493,16 @@
       line-height: 1.55;
       text-align: left;
     }
-    .download-tip svg { flex-shrink: 0; margin-top: 1px; color: #a78bfa; }
-    .download-tip strong { color: #c4b5fd; }
+
+    .download-tip svg {
+      flex-shrink: 0;
+      margin-top: 1px;
+      color: #a78bfa;
+    }
+
+    .download-tip strong {
+      color: #c4b5fd;
+    }
 
     /* ── iOS Button & Platform Styles ── */
     .btn-primary.green {
@@ -437,6 +510,7 @@
       color: #ffffff;
       box-shadow: 0 6px 24px rgba(29, 158, 117, 0.35);
     }
+
     .btn-primary.green:hover {
       box-shadow: 0 8px 30px rgba(29, 158, 117, 0.55);
       transform: translateY(-2px);
@@ -454,6 +528,7 @@
       font-size: 0.86rem;
       color: var(--text-muted);
     }
+
     .hero-platform-pill {
       display: inline-flex;
       align-items: center;
@@ -465,14 +540,17 @@
       transition: all 0.2s ease;
       font-weight: 500;
     }
+
     .hero-platform-pill:hover {
       border-color: rgba(29, 158, 117, 0.4);
       background: rgba(255, 255, 255, 0.07);
     }
+
     .hero-platform-pill.android-pill {
       border-color: rgba(167, 139, 250, 0.35);
       color: #d8b4fe;
     }
+
     .hero-platform-pill.ios-pill {
       border-color: rgba(29, 158, 117, 0.45);
       color: #86f8c9;
@@ -488,6 +566,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .platform-card {
       background: linear-gradient(145deg, rgba(25, 34, 29, 0.85) 0%, rgba(19, 25, 22, 0.95) 100%);
       border: 1px solid var(--border);
@@ -500,42 +579,53 @@
       justify-content: space-between;
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .platform-card.android {
       border-color: rgba(167, 139, 250, 0.35);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 35px rgba(124, 58, 237, 0.12);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 35px rgba(124, 58, 237, 0.12);
     }
+
     .platform-card.android:hover {
       border-color: rgba(167, 139, 250, 0.65);
       transform: translateY(-4px);
-      box-shadow: 0 20px 48px rgba(0,0,0,0.5), 0 0 45px rgba(124, 58, 237, 0.22);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 45px rgba(124, 58, 237, 0.22);
     }
+
     .platform-card.ios {
       border-color: rgba(29, 158, 117, 0.4);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 35px rgba(29, 158, 117, 0.15);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 35px rgba(29, 158, 117, 0.15);
     }
+
     .platform-card.ios:hover {
       border-color: rgba(134, 248, 201, 0.65);
       transform: translateY(-4px);
-      box-shadow: 0 20px 48px rgba(0,0,0,0.5), 0 0 45px rgba(29, 158, 117, 0.25);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 45px rgba(29, 158, 117, 0.25);
     }
+
     .platform-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 3px;
     }
+
     .platform-card.android::before {
       background: linear-gradient(90deg, #7c3aed, #a78bfa);
     }
+
     .platform-card.ios::before {
       background: linear-gradient(90deg, #008560, #86f8c9);
     }
+
     .platform-header {
       display: flex;
       align-items: center;
       gap: 1.25rem;
       margin-bottom: 1.25rem;
     }
+
     .platform-icon-wrap {
       width: 58px;
       height: 58px;
@@ -545,16 +635,19 @@
       justify-content: center;
       flex-shrink: 0;
     }
+
     .platform-icon-wrap.android {
       background: rgba(167, 139, 250, 0.16);
       color: #c4b5fd;
       border: 1px solid rgba(167, 139, 250, 0.35);
     }
+
     .platform-icon-wrap.ios {
       background: rgba(29, 158, 117, 0.18);
       color: #86f8c9;
       border: 1px solid rgba(29, 158, 117, 0.35);
     }
+
     .platform-badge-group {
       display: flex;
       align-items: center;
@@ -562,6 +655,7 @@
       margin-bottom: 0.35rem;
       flex-wrap: wrap;
     }
+
     .platform-badge {
       font-size: 0.7rem;
       font-weight: 800;
@@ -570,21 +664,25 @@
       padding: 0.2rem 0.6rem;
       border-radius: 999px;
     }
+
     .platform-badge.purple {
       background: rgba(167, 139, 250, 0.2);
       color: #d8b4fe;
       border: 1px solid rgba(167, 139, 250, 0.4);
     }
+
     .platform-badge.green {
       background: rgba(134, 248, 201, 0.15);
       color: #86f8c9;
       border: 1px solid rgba(134, 248, 201, 0.4);
     }
+
     .platform-badge.subtle {
       background: rgba(255, 255, 255, 0.06);
       color: #9aa8a0;
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
+
     .platform-title {
       font-family: var(--font-heading);
       font-size: 1.65rem;
@@ -592,18 +690,21 @@
       color: #f3f6f4;
       line-height: 1.2;
     }
+
     .platform-desc {
       color: var(--text-muted);
       font-size: 0.95rem;
       line-height: 1.6;
       margin-bottom: 1.5rem;
     }
+
     .platform-specs-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 0.75rem;
       margin-bottom: 1.75rem;
     }
+
     .platform-spec-chip {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.06);
@@ -613,35 +714,47 @@
       flex-direction: column;
       gap: 0.2rem;
     }
+
     .platform-spec-chip span {
       font-size: 0.72rem;
       color: var(--text-dim);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
+
     .platform-spec-chip strong {
       font-size: 0.92rem;
       color: #f3f6f4;
     }
-    .platform-card.android .platform-spec-chip strong { color: #c4b5fd; }
-    .platform-card.ios .platform-spec-chip strong { color: #86f8c9; }
+
+    .platform-card.android .platform-spec-chip strong {
+      color: #c4b5fd;
+    }
+
+    .platform-card.ios .platform-spec-chip strong {
+      color: #86f8c9;
+    }
+
     .platform-actions {
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
       margin-bottom: 1.75rem;
     }
+
     .btn-full {
       width: 100%;
       justify-content: center;
       text-align: center;
       padding: 0.85rem 1.25rem;
     }
+
     .platform-guide {
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding-top: 1.5rem;
       margin-top: 0.5rem;
     }
+
     .guide-title {
       font-family: var(--font-heading);
       font-size: 0.92rem;
@@ -652,11 +765,13 @@
       align-items: center;
       gap: 0.5rem;
     }
+
     .guide-steps-list {
       display: flex;
       flex-direction: column;
       gap: 0.65rem;
     }
+
     .guide-step-row {
       display: flex;
       align-items: flex-start;
@@ -665,6 +780,7 @@
       color: var(--text-muted);
       line-height: 1.45;
     }
+
     .guide-step-idx {
       width: 22px;
       height: 22px;
@@ -677,14 +793,17 @@
       flex-shrink: 0;
       margin-top: 1px;
     }
+
     .platform-card.android .guide-step-idx {
       background: rgba(167, 139, 250, 0.2);
       color: #c4b5fd;
     }
+
     .platform-card.ios .guide-step-idx {
       background: rgba(29, 158, 117, 0.25);
       color: #86f8c9;
     }
+
     .btn-secondary.copied {
       background: rgba(29, 158, 117, 0.2) !important;
       border-color: #86f8c9 !important;
@@ -695,6 +814,7 @@
       .platforms-grid {
         grid-template-columns: 1fr;
       }
+
       .platform-card {
         padding: 2rem 1.5rem;
       }
@@ -725,14 +845,16 @@
         <li><a href="#features" class="nav-link">Features</a></li>
         <li><a href="#corridors" class="nav-link">Corridors</a></li>
         <li><a href="#download" class="nav-link">Get Mapper</a></li>
-        <li><a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer" class="nav-link" style="color: #86f8c9; font-weight: 700;">iOS Web App ↗</a></li>
+        <li><a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer"
+            class="nav-link" style="color: #86f8c9; font-weight: 700;">iOS Web App ↗</a></li>
         <li><a href="#faq" class="nav-link">FAQ</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <div class="nav-actions">
         <!-- Direct GitHub download for Android -->
-        <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.5.apk"
-           target="_blank" rel="noopener noreferrer" class="nav-cta" style="background: linear-gradient(135deg, #a78bfa, #7c3aed);">
+        <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.6.apk"
+          target="_blank" rel="noopener noreferrer" class="nav-cta"
+          style="background: linear-gradient(135deg, #a78bfa, #7c3aed);">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -743,8 +865,9 @@
           <span class="cta-text-short">APK</span>
         </a>
         <!-- iOS Web App button -->
-        <a href="https://yudharssiif.github.io/zannav-mapper-app/"
-           target="_blank" rel="noopener noreferrer" class="nav-cta" style="background: linear-gradient(135deg, #1d9e75, #008560); border: 1px solid rgba(134, 248, 201, 0.35); box-shadow: 0 4px 14px rgba(29, 158, 117, 0.3);">
+        <a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer"
+          class="nav-cta"
+          style="background: linear-gradient(135deg, #1d9e75, #008560); border: 1px solid rgba(134, 248, 201, 0.35); box-shadow: 0 4px 14px rgba(29, 158, 117, 0.3);">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
@@ -766,17 +889,20 @@
   <section class="hero">
     <div class="badge mapper-badge reveal stagger-1">
       <span class="pulse-dot"></span>
-      Open Daladala Transit Mapping Initiative • v1.0.5 Released
+      Open Daladala Transit Mapping Initiative • v1.0.6 Released
     </div>
     <h1 class="reveal stagger-2">Put Zanzibar's Daladalas <br><span>On The Map</span></h1>
     <p class="hero-subtitle reveal stagger-3">
-      Over 70% of public transit lines, bus stages (vituo), and transfer corridors across Unguja have never been digitally
+      Over 70% of public transit lines, bus stages (vituo), and transfer corridors across Unguja have never been
+      digitally
       mapped. <strong>ZanNav Mapper</strong> is the community companion tool empowering everyday
-      riders, students, and transit champions to trace Daladala routes with GPS, catalog bus stops, and build open transit data for all of Zanzibar — available as a native <strong>Android APK (v1.0.5)</strong> and an instant <strong>iOS Web App</strong>.
+      riders, students, and transit champions to trace Daladala routes with GPS, catalog bus stops, and build open
+      transit data for all of Zanzibar — available as a native <strong>Android APK (v1.0.6)</strong> and an instant
+      <strong>iOS Web App</strong>.
     </p>
     <div class="hero-buttons reveal stagger-4">
       <!-- Direct GitHub Android APK download -->
-      <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.5.apk"
+      <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.6.apk"
         target="_blank" rel="noopener noreferrer" class="btn-primary purple" id="hero-download-btn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
           stroke-linecap="round" stroke-linejoin="round">
@@ -784,11 +910,11 @@
           <polyline points="7 10 12 15 17 10"></polyline>
           <line x1="12" y1="15" x2="12" y2="3"></line>
         </svg>
-        Download Android APK (v1.0.5)
+        Download Android APK (v1.0.6)
       </a>
       <!-- Launch iOS Web App -->
-      <a href="https://yudharssiif.github.io/zannav-mapper-app/"
-        target="_blank" rel="noopener noreferrer" class="btn-primary green" id="hero-ios-btn">
+      <a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer"
+        class="btn-primary green" id="hero-ios-btn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
           stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
@@ -809,19 +935,22 @@
     <div class="hero-platforms-bar reveal stagger-5">
       <span class="hero-platform-pill android-pill">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.996-3.456c.089-.154.037-.352-.117-.441-.154-.089-.352-.037-.441.117l-2.023 3.504C15.681 8.358 13.899 8 12 8s-3.681.358-5.292 1.045L4.685 5.541c-.089-.154-.287-.206-.441-.117-.154.089-.206.287-.117.441l1.996 3.456C2.697 11.238 0 15.006 0 19.5h24c0-4.494-2.697-8.262-6.118-10.179"/>
+          <path
+            d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.996-3.456c.089-.154.037-.352-.117-.441-.154-.089-.352-.037-.441.117l-2.023 3.504C15.681 8.358 13.899 8 12 8s-3.681.358-5.292 1.045L4.685 5.541c-.089-.154-.287-.206-.441-.117-.154.089-.206.287-.117.441l1.996 3.456C2.697 11.238 0 15.006 0 19.5h24c0-4.494-2.697-8.262-6.118-10.179" />
         </svg>
-        Android APK v1.0.5
+        Android APK v1.0.6
       </span>
       <span class="hero-platform-pill ios-pill">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
           <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
         </svg>
         iOS Safari Web App (PWA)
       </span>
       <span class="hero-platform-pill">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
         </svg>
         100% Offline-Ready GPS
@@ -838,7 +967,8 @@
           </div>
           <div class="route-corridor">Fuoni ↔ Mnazi Mmoja</div>
           <div class="route-detail">Mnazi Mmoja Terminal ↔ Kisimani (Fuoni)</div>
-          <div style="margin-top: 1rem; font-size: 0.8rem; color: #86f8c9;">Started • Remaining intermediate stops needed</div>
+          <div style="margin-top: 1rem; font-size: 0.8rem; color: #86f8c9;">Started • Remaining intermediate stops
+            needed</div>
         </div>
 
         <div class="mockup-card">
@@ -848,7 +978,8 @@
           </div>
           <div class="route-corridor">Kiembe Samaki ↔ Mnazi Mmoja</div>
           <div class="route-detail">Mnazi Mmoja ↔ Kiembe Samaki Mwisho</div>
-          <div style="margin-top: 1rem; font-size: 0.8rem; color: #c4b5fd;">Started • Return-leg &amp; stop shelter tags needed</div>
+          <div style="margin-top: 1rem; font-size: 0.8rem; color: #c4b5fd;">Started • Return-leg &amp; stop shelter tags
+            needed</div>
         </div>
 
         <div class="mockup-card">
@@ -858,7 +989,8 @@
           </div>
           <div class="route-corridor">Bububu, Airport, Chukwani &amp; More</div>
           <div class="route-detail">Bububu ↔ Mnazi Mmoja • Bububu ↔ Fuoni • Airport lines</div>
-          <div style="margin-top: 1rem; font-size: 0.8rem; color: #fc6b32;">Not yet mapped • Volunteers urgently needed!</div>
+          <div style="margin-top: 1rem; font-size: 0.8rem; color: #fc6b32;">Not yet mapped • Volunteers urgently needed!
+          </div>
         </div>
       </div>
     </div>
@@ -869,13 +1001,15 @@
     <div class="section-header reveal">
       <div class="section-tag">Community Impact</div>
       <h2 class="section-title">Why Mapping Daladalas Matters</h2>
-      <p class="section-desc">Daladalas are the heartbeat of public mobility across Unguja. By contributing your rides, you help bridge the transit information divide for all Zanzibaris.</p>
+      <p class="section-desc">Daladalas are the heartbeat of public mobility across Unguja. By contributing your rides,
+        you help bridge the transit information divide for all Zanzibaris.</p>
     </div>
 
     <div class="impact-grid">
       <div class="impact-card reveal stagger-1">
         <div class="impact-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="2" y1="12" x2="22" y2="12"></line>
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
@@ -883,13 +1017,15 @@
         </div>
         <h3 class="impact-title">Close the Transit Data Gap</h3>
         <p class="impact-desc">
-          Most Daladala corridors have never had published routes, schedules, or verified stops. ZanNav Mapper transforms informal, word-of-mouth routes into structured geographic knowledge.
+          Most Daladala corridors have never had published routes, schedules, or verified stops. ZanNav Mapper
+          transforms informal, word-of-mouth routes into structured geographic knowledge.
         </p>
       </div>
 
       <div class="impact-card reveal stagger-2">
         <div class="impact-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -898,33 +1034,38 @@
         </div>
         <h3 class="impact-title">Empower Everyday Commuters</h3>
         <p class="impact-desc">
-          When you map a route, you help students travelling to SUZA, hospital workers heading to Mnazi Mmoja, and island residents navigating cross-street transfers safely with zero guesswork.
+          When you map a route, you help students travelling to SUZA, hospital workers heading to Mnazi Mmoja, and
+          island residents navigating cross-street transfers safely with zero guesswork.
         </p>
       </div>
 
       <div class="impact-card reveal stagger-3">
         <div class="impact-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <polyline points="16 18 22 12 16 6"></polyline>
             <polyline points="8 6 2 12 8 18"></polyline>
           </svg>
         </div>
         <h3 class="impact-title">100% Open Data &amp; OSM Standards</h3>
         <p class="impact-desc">
-          Your field survey submissions feed directly into OpenStreetMap and open transit datasets under the ODbL license, freely accessible to urban researchers, students, and software developers.
+          Your field survey submissions feed directly into OpenStreetMap and open transit datasets under the ODbL
+          license, freely accessible to urban researchers, students, and software developers.
         </p>
       </div>
 
       <div class="impact-card reveal stagger-4">
         <div class="impact-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
             <polyline points="22 4 12 14.01 9 11.01"></polyline>
           </svg>
         </div>
         <h3 class="impact-title">Every Single Ride Counts</h3>
         <p class="impact-desc">
-          No specialized survey equipment or cartography degrees required. If you ride Daladalas regularly, you can log high-precision GPS route paths directly from your Android smartphone.
+          No specialized survey equipment or cartography degrees required. If you ride Daladalas regularly, you can log
+          high-precision GPS route paths directly from your Android smartphone.
         </p>
       </div>
     </div>
@@ -942,48 +1083,55 @@
       <div class="step-card reveal stagger-1">
         <div class="step-num" style="color: #a78bfa;">01</div>
         <h3 class="step-title">Get ZanNav Mapper</h3>
-        <p class="step-desc">On Android, download the v1.0.5 APK directly from GitHub. On iPhone / iPad, launch the dedicated Web App in Safari (and tap "Add to Home Screen"). 100% free with zero registration required.</p>
+        <p class="step-desc">On Android, download the v1.0.6 APK directly from GitHub. On iPhone / iPad, launch the
+          dedicated Web App in Safari (and tap "Add to Home Screen"). 100% free with zero registration required.</p>
       </div>
 
       <div class="step-card reveal stagger-2">
         <div class="step-num" style="color: #a78bfa;">02</div>
         <h3 class="step-title">Board &amp; Start GPS Tracing</h3>
-        <p class="step-desc">Hop into your Daladala at any terminal (Mnazi Mmoja, Darajani, etc.). Tap <strong>"Start Survey"</strong> and keep your phone near a window or pocket to record GPS breadcrumbs.</p>
+        <p class="step-desc">Hop into your Daladala at any terminal (Mnazi Mmoja, Darajani, etc.). Tap <strong>"Start
+            Survey"</strong> and keep your phone near a window or pocket to record GPS breadcrumbs.</p>
       </div>
 
       <div class="step-card reveal stagger-3">
         <div class="step-num" style="color: #a78bfa;">03</div>
         <h3 class="step-title">Pin Bus Stops (Vituo)</h3>
-        <p class="step-desc">Whenever the Daladala stops to pick up or drop passengers, tap <strong>"Add Stop"</strong>. Enter its local Swahili name, note if there's a shelter or sign, and flag transfer points.</p>
+        <p class="step-desc">Whenever the Daladala stops to pick up or drop passengers, tap <strong>"Add Stop"</strong>.
+          Enter its local Swahili name, note if there's a shelter or sign, and flag transfer points.</p>
       </div>
 
       <div class="step-card reveal stagger-4">
         <div class="step-num" style="color: #a78bfa;">04</div>
         <h3 class="step-title">Submit &amp; Open The Data</h3>
-        <p class="step-desc">Upon arriving at the terminus, tap <strong>"Finish Survey"</strong>. Review your route polyline and stop sequence, then submit or export the spatial dataset to the review pipeline.</p>
+        <p class="step-desc">Upon arriving at the terminus, tap <strong>"Finish Survey"</strong>. Review your route
+          polyline and stop sequence, then submit or export the spatial dataset to the review pipeline.</p>
       </div>
     </div>
 
     <div class="contributor-banner reveal-scale">
       <div class="contributor-banner-text">
         <h3>Ready to map on your next trip?</h3>
-        <p>Whether you're riding Line 504 to Fuoni, commuting down to Kiembe Samaki, or heading to Bububu, your GPS survey makes public transport better for everyone across Zanzibar.</p>
+        <p>Whether you're riding Line 504 to Fuoni, commuting down to Kiembe Samaki, or heading to Bububu, your GPS
+          survey makes public transport better for everyone across Zanzibar.</p>
       </div>
       <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
         <!-- Direct GitHub download -->
-        <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.5.apk"
-           target="_blank" rel="noopener noreferrer" class="btn-primary purple">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.6.apk"
+          target="_blank" rel="noopener noreferrer" class="btn-primary purple">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          Download APK (v1.0.5)
+          Download APK (v1.0.6)
         </a>
         <!-- Launch iOS Web App -->
-        <a href="https://yudharssiif.github.io/zannav-mapper-app/"
-           target="_blank" rel="noopener noreferrer" class="btn-primary green">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer"
+          class="btn-primary green">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
           </svg>
@@ -998,45 +1146,53 @@
     <div class="section-header reveal">
       <div class="section-tag">Field-Grade Capabilities</div>
       <h2 class="section-title">Engineered for Island Realities</h2>
-      <p class="section-desc">Designed from the ground up to solve the real challenges of informal transit data collection in Unguja.</p>
+      <p class="section-desc">Designed from the ground up to solve the real challenges of informal transit data
+        collection in Unguja.</p>
     </div>
 
     <div class="features-grid">
       <div class="feature-card reveal stagger-1">
         <div class="feature-icon" style="background: rgba(167, 139, 250, 0.2); color: #c4b5fd;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
           </svg>
         </div>
         <h3 class="feature-title">100% Offline Field Collection</h3>
-        <p class="feature-desc">Map rural or coastal Daladala routes across Unguja with zero cellular data. All GPS logs and stop attributes save securely on-device until you connect to Wi-Fi.</p>
+        <p class="feature-desc">Map rural or coastal Daladala routes across Unguja with zero cellular data. All GPS logs
+          and stop attributes save securely on-device until you connect to Wi-Fi.</p>
       </div>
 
       <div class="feature-card reveal stagger-2">
         <div class="feature-icon" style="background: rgba(29, 158, 117, 0.2); color: #86f8c9;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <polyline points="12 6 12 12 16 14"></polyline>
           </svg>
         </div>
         <h3 class="feature-title">Real-Time GPS Route Logging</h3>
-        <p class="feature-desc">Adaptive GPS breadcrumbs capture the exact roadway trajectory of moving Daladalas, filtering vehicle drift while keeping battery consumption exceptionally low.</p>
+        <p class="feature-desc">Adaptive GPS breadcrumbs capture the exact roadway trajectory of moving Daladalas,
+          filtering vehicle drift while keeping battery consumption exceptionally low.</p>
       </div>
 
       <div class="feature-card reveal stagger-3">
         <div class="feature-icon" style="background: rgba(252, 107, 50, 0.2); color: #fc6b32;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
             <circle cx="12" cy="10" r="3"></circle>
           </svg>
         </div>
         <h3 class="feature-title">One-Tap Bus Stop Marking</h3>
-        <p class="feature-desc">Quickly drop stops at verified vituo. Tag local Swahili names, travel directions (inbound/outbound), shelter presence, and roadside landmarks without slowing your ride.</p>
+        <p class="feature-desc">Quickly drop stops at verified vituo. Tag local Swahili names, travel directions
+          (inbound/outbound), shelter presence, and roadside landmarks without slowing your ride.</p>
       </div>
 
       <div class="feature-card reveal stagger-4">
         <div class="feature-icon" style="background: rgba(167, 139, 250, 0.2); color: #c4b5fd;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
             <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
             <line x1="6" y1="6" x2="6.01" y2="6"></line>
@@ -1044,12 +1200,14 @@
           </svg>
         </div>
         <h3 class="feature-title">Terminals &amp; Transfer Junctions</h3>
-        <p class="feature-desc">Explicitly identify central interchange hubs (Mnazi Mmoja, Darajani, Mwanakwerekwe) and cross-street transfer nodes where passengers switch routes.</p>
+        <p class="feature-desc">Explicitly identify central interchange hubs (Mnazi Mmoja, Darajani, Mwanakwerekwe) and
+          cross-street transfer nodes where passengers switch routes.</p>
       </div>
 
       <div class="feature-card reveal stagger-5">
         <div class="feature-icon" style="background: rgba(29, 158, 117, 0.2); color: #86f8c9;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <polyline points="16 3 21 3 21 8"></polyline>
             <line x1="4" y1="20" x2="21" y2="3"></line>
             <polyline points="21 16 21 21 16 21"></polyline>
@@ -1058,18 +1216,21 @@
           </svg>
         </div>
         <h3 class="feature-title">Export to Open Standards</h3>
-        <p class="feature-desc">Export completed surveys directly into GeoJSON, GPX, and OSM transit relation formats for seamless integration into OpenStreetMap, JOSM, or QGIS workflows.</p>
+        <p class="feature-desc">Export completed surveys directly into GeoJSON, GPX, and OSM transit relation formats
+          for seamless integration into OpenStreetMap, JOSM, or QGIS workflows.</p>
       </div>
 
       <div class="feature-card reveal stagger-6">
         <div class="feature-icon" style="background: rgba(252, 107, 50, 0.2); color: #fc6b32;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
             <line x1="12" y1="18" x2="12.01" y2="18"></line>
           </svg>
         </div>
         <h3 class="feature-title">Android APK &amp; iOS Web App</h3>
-        <p class="feature-desc">Survey Daladalas on any phone. Native Android APK (v1.0.5) with background GPS services, plus an instant Safari Progressive Web App (PWA) tailored for iPhone and iPad users.</p>
+        <p class="feature-desc">Survey Daladalas on any phone. Native Android APK (v1.0.6) with background GPS services,
+          plus an instant Safari Progressive Web App (PWA) tailored for iPhone and iPad users.</p>
       </div>
     </div>
   </section>
@@ -1079,7 +1240,8 @@
     <div class="section-header reveal">
       <div class="section-tag">Transit Corridors Status</div>
       <h2 class="section-title">Priority Corridors Needing Mapping</h2>
-      <p class="section-desc">Track live mapping progress across Unguja. Two corridors are started, while multiple major routes are not yet mapped and urgently need volunteer field surveys.</p>
+      <p class="section-desc">Track live mapping progress across Unguja. Two corridors are started, while multiple major
+        routes are not yet mapped and urgently need volunteer field surveys.</p>
     </div>
 
     <div class="corridors-grid">
@@ -1092,7 +1254,7 @@
           </div>
           <div class="corridor-name">Fuoni ↔ Mnazi Mmoja</div>
           <div class="corridor-route">Mnazi Mmoja Terminal ↔ Mwanakwerekwe ↔ Fuoni ↔ Kisimani</div>
-          
+
           <div class="corridor-progress-wrap">
             <div class="corridor-progress-meta green">
               <span>Mapping Progress</span>
@@ -1104,7 +1266,8 @@
           </div>
 
           <p class="corridor-detail">
-            Started and well underway. The main roadway track is logged and primary stops are verified. Contributors are needed to map remaining intermediate vituo and return-leg stops.
+            Started and well underway. The main roadway track is logged and primary stops are verified. Contributors are
+            needed to map remaining intermediate vituo and return-leg stops.
           </p>
         </div>
         <div class="corridor-footer">
@@ -1122,7 +1285,7 @@
           </div>
           <div class="corridor-name">Kiembe Samaki ↔ Mnazi Mmoja</div>
           <div class="corridor-route">Mnazi Mmoja Terminal ↔ Mombasa ↔ Kiembe Samaki Mwisho</div>
-          
+
           <div class="corridor-progress-wrap">
             <div class="corridor-progress-meta purple">
               <span>Mapping Progress</span>
@@ -1134,7 +1297,8 @@
           </div>
 
           <p class="corridor-detail">
-            Started and active. Core stops and route geometry logged. Remaining 40% requires physical shelter tags, local stage names, and feeder junction connections.
+            Started and active. Core stops and route geometry logged. Remaining 40% requires physical shelter tags,
+            local stage names, and feeder junction connections.
           </p>
         </div>
         <div class="corridor-footer">
@@ -1152,7 +1316,7 @@
           </div>
           <div class="corridor-name">Bububu ↔ Mnazi Mmoja</div>
           <div class="corridor-route">Mnazi Mmoja / Darajani ↔ Saateni ↔ Mtoni ↔ Bububu</div>
-          
+
           <div class="corridor-progress-wrap">
             <div class="corridor-progress-meta orange">
               <span>Mapping Progress</span>
@@ -1164,7 +1328,8 @@
           </div>
 
           <p class="corridor-detail">
-            Crucial northern commuter corridor carrying thousands of riders daily. Not yet mapped — volunteer GPS traces and bus stop (vituo) records are urgently needed.
+            Crucial northern commuter corridor carrying thousands of riders daily. Not yet mapped — volunteer GPS traces
+            and bus stop (vituo) records are urgently needed.
           </p>
         </div>
         <div class="corridor-footer">
@@ -1182,7 +1347,7 @@
           </div>
           <div class="corridor-name">Bububu ↔ Fuoni</div>
           <div class="corridor-route">Bububu ↔ Masingini ↔ Mwanakwerekwe ↔ Fuoni</div>
-          
+
           <div class="corridor-progress-wrap">
             <div class="corridor-progress-meta orange">
               <span>Mapping Progress</span>
@@ -1194,7 +1359,8 @@
           </div>
 
           <p class="corridor-detail">
-            Essential orbital cross-district link connecting northern and central Unguja without passing through Stone Town. Not yet mapped; volunteer traces needed.
+            Essential orbital cross-district link connecting northern and central Unguja without passing through Stone
+            Town. Not yet mapped; volunteer traces needed.
           </p>
         </div>
         <div class="corridor-footer">
@@ -1212,7 +1378,7 @@
           </div>
           <div class="corridor-name">Uwanja wa Ndege ↔ Mnazi Mmoja</div>
           <div class="corridor-route">Mnazi Mmoja ↔ Mazizini ↔ Abeid Amani Karume Airport (T2 &amp; T3)</div>
-          
+
           <div class="corridor-progress-wrap">
             <div class="corridor-progress-meta orange">
               <span>Mapping Progress</span>
@@ -1224,7 +1390,8 @@
           </div>
 
           <p class="corridor-detail">
-            Primary transit line serving airport staff, airline crews, and travelers. Zero digital route geometry or stop coordinates mapped yet. Ready for your field survey!
+            Primary transit line serving airport staff, airline crews, and travelers. Zero digital route geometry or
+            stop coordinates mapped yet. Ready for your field survey!
           </p>
         </div>
         <div class="corridor-footer">
@@ -1242,7 +1409,7 @@
           </div>
           <div class="corridor-name">Chukwani ↔ Mnazi Mmoja</div>
           <div class="corridor-route">Mnazi Mmoja Terminal ↔ Mbweni ↔ Chukwani ZSSF</div>
-          
+
           <div class="corridor-progress-wrap">
             <div class="corridor-progress-meta orange">
               <span>Mapping Progress</span>
@@ -1254,7 +1421,8 @@
           </div>
 
           <p class="corridor-detail">
-            Rapidly growing southern government and residential corridor. Bus stages along Mbweni and Chukwani are unmapped; volunteers needed to record GPS tracks.
+            Rapidly growing southern government and residential corridor. Bus stages along Mbweni and Chukwani are
+            unmapped; volunteers needed to record GPS tracks.
           </p>
         </div>
         <div class="corridor-footer">
@@ -1272,7 +1440,7 @@
           </div>
           <div class="corridor-name">Daraja Bovu ↔ Mnazi Mmoja</div>
           <div class="corridor-route">Mnazi Mmoja / Darajani ↔ Daraja Bovu ↔ Amani</div>
-          
+
           <div class="corridor-progress-wrap">
             <div class="corridor-progress-meta orange">
               <span>Mapping Progress</span>
@@ -1284,7 +1452,8 @@
           </div>
 
           <p class="corridor-detail">
-            High-density urban residential corridor connecting Daraja Bovu and surrounding neighborhoods. Needs local Swahili stop names and stage coordinates.
+            High-density urban residential corridor connecting Daraja Bovu and surrounding neighborhoods. Needs local
+            Swahili stop names and stage coordinates.
           </p>
         </div>
         <div class="corridor-footer">
@@ -1302,7 +1471,7 @@
           </div>
           <div class="corridor-name">Other Island Transit Corridors</div>
           <div class="corridor-route">SUZA Tunguu, Mkokotoni, Nungwi, Chwaka, Paje &amp; Makunduchi</div>
-          
+
           <div class="corridor-progress-wrap">
             <div class="corridor-progress-meta green">
               <span>Mapping Progress</span>
@@ -1314,7 +1483,8 @@
           </div>
 
           <p class="corridor-detail">
-            Long-distance student commuter routes, university campus feeders, and coastal transit paths across Unguja. Grab ZanNav Mapper on your next Daladala ride to map these routes!
+            Long-distance student commuter routes, university campus feeders, and coastal transit paths across Unguja.
+            Grab ZanNav Mapper on your next Daladala ride to map these routes!
           </p>
         </div>
         <div class="corridor-footer">
@@ -1330,7 +1500,8 @@
     <div class="section-header reveal">
       <div class="section-tag">Cross-Platform Field Mapping</div>
       <h2 class="section-title">Get ZanNav Mapper on Your Device</h2>
-      <p class="section-desc">Contribute to Zanzibar's open Daladala database on any device. Download the native Android APK (v1.0.5) or launch the instant iOS Web App directly in Safari.</p>
+      <p class="section-desc">Contribute to Zanzibar's open Daladala database on any device. Download the native Android
+        APK (v1.0.6) or launch the instant iOS Web App directly in Safari.</p>
     </div>
 
     <div class="platforms-grid">
@@ -1340,12 +1511,13 @@
           <div class="platform-header">
             <div class="platform-icon-wrap android">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.996-3.456c.089-.154.037-.352-.117-.441-.154-.089-.352-.037-.441.117l-2.023 3.504C15.681 8.358 13.899 8 12 8s-3.681.358-5.292 1.045L4.685 5.541c-.089-.154-.287-.206-.441-.117-.154.089-.206.287-.117.441l1.996 3.456C2.697 11.238 0 15.006 0 19.5h24c0-4.494-2.697-8.262-6.118-10.179"/>
+                <path
+                  d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.996-3.456c.089-.154.037-.352-.117-.441-.154-.089-.352-.037-.441.117l-2.023 3.504C15.681 8.358 13.899 8 12 8s-3.681.358-5.292 1.045L4.685 5.541c-.089-.154-.287-.206-.441-.117-.154.089-.206.287-.117.441l1.996 3.456C2.697 11.238 0 15.006 0 19.5h24c0-4.494-2.697-8.262-6.118-10.179" />
               </svg>
             </div>
             <div>
               <div class="platform-badge-group">
-                <span class="platform-badge purple">v1.0.5 Released</span>
+                <span class="platform-badge purple">v1.0.6 Released</span>
                 <span class="platform-badge subtle">Native Android</span>
               </div>
               <h3 class="platform-title">Android Edition</h3>
@@ -1353,13 +1525,14 @@
           </div>
 
           <p class="platform-desc">
-            Directly compiled Android APK with background GPS trajectory tracking, offline SQLite database, jitter filtering, and GPX/GeoJSON export.
+            Directly compiled Android APK with background GPS trajectory tracking, offline SQLite database, jitter
+            filtering, and GPX/GeoJSON export.
           </p>
 
           <div class="platform-specs-grid">
             <div class="platform-spec-chip">
               <span>Version</span>
-              <strong>1.0.5 (Latest)</strong>
+              <strong>1.0.6 (Latest)</strong>
             </div>
             <div class="platform-spec-chip">
               <span>Platform</span>
@@ -1377,17 +1550,19 @@
 
           <div class="platform-actions">
             <!-- Direct GitHub download button -->
-            <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.5.apk"
-               target="_blank" rel="noopener noreferrer" class="btn-primary purple btn-full" id="main-mapper-apk-download">
+            <a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.6.apk"
+              target="_blank" rel="noopener noreferrer" class="btn-primary purple btn-full"
+              id="main-mapper-apk-download">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
-              Download Android APK (v1.0.5)
+              Download Android APK (v1.0.6)
             </a>
-            <a href="https://github.com/Yudharssiif/zannav-app/releases" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-full" id="github-mapper-release-page">
+            <a href="https://github.com/Yudharssiif/zannav-app/releases" target="_blank" rel="noopener noreferrer"
+              class="btn-secondary btn-full" id="github-mapper-release-page">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
@@ -1399,13 +1574,16 @@
 
         <div class="platform-guide">
           <div class="guide-title">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
             How to Install on Android
           </div>
           <div class="guide-steps-list">
             <div class="guide-step-row">
               <span class="guide-step-idx">1</span>
-              <span>Download <code>zannav-mapper-v1.0.5.apk</code> to your device.</span>
+              <span>Download <code>zannav-mapper-v1.0.6.apk</code> to your device.</span>
             </div>
             <div class="guide-step-row">
               <span class="guide-step-idx">2</span>
@@ -1428,7 +1606,8 @@
         <div>
           <div class="platform-header">
             <div class="platform-icon-wrap ios">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
               </svg>
@@ -1443,7 +1622,8 @@
           </div>
 
           <p class="platform-desc">
-            Exported as a Progressive Web App (PWA) optimized for iPhone &amp; iPad. Runs directly in Safari with instant GPS route tracing and zero install downloads.
+            Exported as a Progressive Web App (PWA) optimized for iPhone &amp; iPad. Runs directly in Safari with
+            instant GPS route tracing and zero install downloads.
           </p>
 
           <div class="platform-specs-grid">
@@ -1467,8 +1647,8 @@
 
           <div class="platform-actions">
             <!-- Launch iOS Web App -->
-            <a href="https://yudharssiif.github.io/zannav-mapper-app/"
-               target="_blank" rel="noopener noreferrer" class="btn-primary green btn-full" id="main-mapper-ios-launch">
+            <a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer"
+              class="btn-primary green btn-full" id="main-mapper-ios-launch">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -1476,7 +1656,8 @@
               </svg>
               Launch iOS Web App ↗
             </a>
-            <button type="button" class="btn-secondary btn-full copy-link-btn" data-url="https://yudharssiif.github.io/zannav-mapper-app/">
+            <button type="button" class="btn-secondary btn-full copy-link-btn"
+              data-url="https://yudharssiif.github.io/zannav-mapper-app/">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
@@ -1489,7 +1670,12 @@
 
         <div class="platform-guide">
           <div class="guide-title">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+              <polyline points="16 6 12 2 8 6" />
+              <line x1="12" y1="2" x2="12" y2="15" />
+            </svg>
             How to Add to iOS Home Screen (Safari)
           </div>
           <div class="guide-steps-list">
@@ -1520,7 +1706,8 @@
     <div class="section-header reveal">
       <div class="section-tag">Contributor Questions</div>
       <h2 class="section-title">Frequently Asked Questions</h2>
-      <p class="section-desc">Everything you need to know about mapping Daladala routes in Zanzibar with ZanNav Mapper.</p>
+      <p class="section-desc">Everything you need to know about mapping Daladala routes in Zanzibar with ZanNav Mapper.
+      </p>
     </div>
 
     <div class="faq-list">
@@ -1535,7 +1722,9 @@
           </div>
         </button>
         <div class="faq-answer">
-          Anyone! You do not need any background in mapping, GIS, or software engineering. If you commute on Daladalas across Unguja (whether as a student, daily worker, or resident) and have an Android smartphone (via APK v1.0.5) or an iPhone (via the iOS Safari Web App), you have everything needed to map public transit routes.
+          Anyone! You do not need any background in mapping, GIS, or software engineering. If you commute on Daladalas
+          across Unguja (whether as a student, daily worker, or resident) and have an Android smartphone (via APK
+          v1.0.6) or an iPhone (via the iOS Safari Web App), you have everything needed to map public transit routes.
         </div>
       </div>
 
@@ -1550,13 +1739,18 @@
           </div>
         </button>
         <div class="faq-answer">
-          Yes! ZanNav Mapper has been specially exported as an iOS Progressive Web App (PWA) available directly at <a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer" style="color: #86f8c9; text-decoration: underline;">https://yudharssiif.github.io/zannav-mapper-app/</a>. Open that link in Safari on your iPhone, tap the Share icon, and select <strong>"Add to Home Screen"</strong>. This launches in full-screen standalone mode with real-time GPS tracking and offline capabilities — no App Store or TestFlight installation needed!
+          Yes! ZanNav Mapper has been specially exported as an iOS Progressive Web App (PWA) available directly at <a
+            href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer"
+            style="color: #86f8c9; text-decoration: underline;">https://yudharssiif.github.io/zannav-mapper-app/</a>.
+          Open that link in Safari on your iPhone, tap the Share icon, and select <strong>"Add to Home Screen"</strong>.
+          This launches in full-screen standalone mode with real-time GPS tracking and offline capabilities — no App
+          Store or TestFlight installation needed!
         </div>
       </div>
 
       <div class="faq-item reveal stagger-3">
         <button class="faq-question">
-          <span>How do I update to version 1.0.5?</span>
+          <span>How do I update to version 1.0.6?</span>
           <div class="faq-icon">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round">
@@ -1565,7 +1759,12 @@
           </div>
         </button>
         <div class="faq-answer">
-          For Android users, download the latest <code>zannav-mapper-v1.0.5.apk</code> from GitHub and install it directly over your existing installation. Your local saved surveys and draft routes are fully preserved. For iOS users, simply open or refresh the Web App at <a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer" style="color: #86f8c9;">https://yudharssiif.github.io/zannav-mapper-app/</a> in Safari to automatically receive the newest update.
+          For Android users, download the latest <code>zannav-mapper-v1.0.6.apk</code> from GitHub and install it
+          directly over your existing installation. Your local saved surveys and draft routes are fully preserved. For
+          iOS users, simply open or refresh the Web App at <a href="https://yudharssiif.github.io/zannav-mapper-app/"
+            target="_blank" rel="noopener noreferrer"
+            style="color: #86f8c9;">https://yudharssiif.github.io/zannav-mapper-app/</a> in Safari to automatically
+          receive the newest update.
         </div>
       </div>
 
@@ -1580,7 +1779,10 @@
           </div>
         </button>
         <div class="faq-answer">
-          No. Both the Android native app and the iOS Progressive Web App are built offline-first. You can start a survey, log high-resolution GPS tracks, and drop bus stop pins with zero internet connection or cellular mobile balance. All data is cached on your device. Once you are home or connected to Wi-Fi, you can review and submit your survey with one tap.
+          No. Both the Android native app and the iOS Progressive Web App are built offline-first. You can start a
+          survey, log high-resolution GPS tracks, and drop bus stop pins with zero internet connection or cellular
+          mobile balance. All data is cached on your device. Once you are home or connected to Wi-Fi, you can review and
+          submit your survey with one tap.
         </div>
       </div>
 
@@ -1595,7 +1797,9 @@
           </div>
         </button>
         <div class="faq-answer">
-          For best GPS satellite reception, sit near an open window and hold your phone or place it upright in your pocket. Avoid covering the top edge of your phone. ZanNav Mapper incorporates an on-device jitter filter that eliminates erratic location jumps and cleans up road geometry automatically.
+          For best GPS satellite reception, sit near an open window and hold your phone or place it upright in your
+          pocket. Avoid covering the top edge of your phone. ZanNav Mapper incorporates an on-device jitter filter that
+          eliminates erratic location jumps and cleans up road geometry automatically.
         </div>
       </div>
 
@@ -1610,7 +1814,10 @@
           </div>
         </button>
         <div class="faq-answer">
-          Always use the recognized local Swahili name called out by conductors (makondakta) and passengers—for example, <em>"Kisimani Mwisho"</em>, <em>"Makada"</em>, <em>"Mwanakwerekwe Sokoni"</em>, or <em>"Darajani Stand"</em>. If there is an official municipal sign, prominent landmark (e.g., msikiti, hospitali, or shule), include it in the stop notes!
+          Always use the recognized local Swahili name called out by conductors (makondakta) and passengers—for example,
+          <em>"Kisimani Mwisho"</em>, <em>"Makada"</em>, <em>"Mwanakwerekwe Sokoni"</em>, or <em>"Darajani Stand"</em>.
+          If there is an official municipal sign, prominent landmark (e.g., msikiti, hospitali, or shule), include it in
+          the stop notes!
         </div>
       </div>
 
@@ -1625,7 +1832,10 @@
           </div>
         </button>
         <div class="faq-answer">
-          Submitted surveys go through a community validation review to reconcile stop coordinates, clean corridor paths, and verify terminus pairs. The verified data is added to OpenStreetMap (OSM) public transit relations and exported as open GTFS feeds. This directly updates the offline transit map used by thousands of island commuters.
+          Submitted surveys go through a community validation review to reconcile stop coordinates, clean corridor
+          paths, and verify terminus pairs. The verified data is added to OpenStreetMap (OSM) public transit relations
+          and exported as open GTFS feeds. This directly updates the offline transit map used by thousands of island
+          commuters.
         </div>
       </div>
 
@@ -1640,7 +1850,9 @@
           </div>
         </button>
         <div class="faq-answer">
-          Yes, absolutely! We love partnering with local universities (like SUZA), tech hubs, mapping communities, and student organizations across Zanzibar. We provide survey guidelines, priority corridor assignments, and technical support. Reach out through our contact form below to collaborate on a Daladala mapping sprint!
+          Yes, absolutely! We love partnering with local universities (like SUZA), tech hubs, mapping communities, and
+          student organizations across Zanzibar. We provide survey guidelines, priority corridor assignments, and
+          technical support. Reach out through our contact form below to collaborate on a Daladala mapping sprint!
         </div>
       </div>
 
@@ -1655,7 +1867,9 @@
           </div>
         </button>
         <div class="faq-answer">
-          ZanNav Mapper is 100% free and open. There are no advertising trackers, analytics SDKs, or account registrations required. The app only accesses GPS coordinates during an active survey that you explicitly start and stop, and only the transit route and bus stop pins are recorded.
+          ZanNav Mapper is 100% free and open. There are no advertising trackers, analytics SDKs, or account
+          registrations required. The app only accesses GPS coordinates during an active survey that you explicitly
+          start and stop, and only the transit route and bus stop pins are recorded.
         </div>
       </div>
     </div>
@@ -1664,7 +1878,8 @@
   <!-- ── Contact & Community Section ── -->
   <section class="section" id="contact">
     <div class="contact-container reveal-scale">
-      <div class="contact-badge" style="background: rgba(167, 139, 250, 0.15); border-color: rgba(167, 139, 250, 0.4); color: #c4b5fd;">
+      <div class="contact-badge"
+        style="background: rgba(167, 139, 250, 0.15); border-color: rgba(167, 139, 250, 0.4); color: #c4b5fd;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
           stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
@@ -1675,7 +1890,8 @@
       </div>
       <h2 class="contact-title">Join the Zanzibar Mapping Community</h2>
       <p class="contact-desc">
-        Have questions about surveying Daladala routes, want to coordinate a student mapping workshop, or have transit dataset collaborations in mind? We'd love to connect.
+        Have questions about surveying Daladala routes, want to coordinate a student mapping workshop, or have transit
+        dataset collaborations in mind? We'd love to connect.
       </p>
 
       <div class="contact-cards-grid">
@@ -1690,7 +1906,8 @@
           </div>
           <div>
             <div class="contact-item-title">Initiative Coordinator</div>
-            <a href="https://geonovex.netlify.app/" target="_blank" rel="noopener noreferrer" class="contact-item-link" style="color: #c4b5fd;">
+            <a href="https://geonovex.netlify.app/" target="_blank" rel="noopener noreferrer" class="contact-item-link"
+              style="color: #c4b5fd;">
               geonovex.netlify.app
             </a>
           </div>
@@ -1706,7 +1923,8 @@
           </div>
           <div>
             <div class="contact-item-title">Direct Contributor Inquiries</div>
-            <a href="https://geonovex.netlify.app" target="_blank" rel="noopener noreferrer" class="contact-item-link" style="color: #c4b5fd;">
+            <a href="https://geonovex.netlify.app" target="_blank" rel="noopener noreferrer" class="contact-item-link"
+              style="color: #c4b5fd;">
               Contact GeoNovex Team
             </a>
           </div>
@@ -1767,8 +1985,10 @@
             <li><a href="#features">Mapper Tools</a></li>
             <li><a href="#corridors">Priority Corridors</a></li>
             <li><a href="#download">Get Mapper App</a></li>
-            <li><a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.5.apk" target="_blank" rel="noopener noreferrer">Download Android APK (v1.0.5)</a></li>
-            <li><a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer">Launch iOS Web App ↗</a></li>
+            <li><a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.6.apk"
+                target="_blank" rel="noopener noreferrer">Download Android APK (v1.0.6)</a></li>
+            <li><a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank"
+                rel="noopener noreferrer">Launch iOS Web App ↗</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
@@ -1784,11 +2004,16 @@
         <div class="footer-column">
           <h4>Open Data &amp; Apps</h4>
           <ul>
-            <li><a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.5.apk" target="_blank" rel="noopener noreferrer">Download Android APK (v1.0.5)</a></li>
-            <li><a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer">iOS Safari Web App (Live)</a></li>
-            <li><a href="https://github.com/Yudharssiif/zannav-app/releases" target="_blank" rel="noopener noreferrer">GitHub Releases</a></li>
-            <li><a href="https://geonovex.netlify.app/" target="_blank" rel="noopener noreferrer">GeoNovex Studio</a></li>
-            <li><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap ODbL</a></li>
+            <li><a href="https://github.com/Yudharssiif/zannav-app/releases/latest/download/zannav-mapper-v1.0.6.apk"
+                target="_blank" rel="noopener noreferrer">Download Android APK (v1.0.6)</a></li>
+            <li><a href="https://yudharssiif.github.io/zannav-mapper-app/" target="_blank" rel="noopener noreferrer">iOS
+                Safari Web App (Live)</a></li>
+            <li><a href="https://github.com/Yudharssiif/zannav-app/releases" target="_blank"
+                rel="noopener noreferrer">GitHub Releases</a></li>
+            <li><a href="https://geonovex.netlify.app/" target="_blank" rel="noopener noreferrer">GeoNovex Studio</a>
+            </li>
+            <li><a href="https://www.openstreetmap.org/copyright" target="_blank"
+                rel="noopener noreferrer">OpenStreetMap ODbL</a></li>
           </ul>
         </div>
       </div>
